@@ -15,6 +15,21 @@ export const getFlashCards = createAsyncThunk(
     'getFlashCards',
     async (obj) => {
         const res = await fetch(`https://opentdb.com/api.php?amount=${obj.amount}&category=${obj.categoryId}`);
+ 
+        if(!res.ok){
+
+            alert('There were a problem with the request, please try again and wait for the results');
+
+            const payLoadObj = {
+                data: '',
+                amount: 10,
+                categoryId: 1,
+                categoryName: ''
+            }
+
+            return payLoadObj;
+        }
+
         const data = await res.json();
 
         const payLoadObj = {
@@ -32,9 +47,9 @@ const initialState = {
     categories: [],
     flashCards: [],
     categoryId: 1,
-    categoryName:'',
+    categoryName: '',
     amount: 10,
-    status: 'idle',
+    status: 'Loading...',
     error: ''
 }
 
@@ -76,6 +91,10 @@ const categorySlice = createSlice({
     }
 })
 
+
+export const isLoading = state => {
+    return state.categoryReducer.status;
+}
 export const { goToHome } = categorySlice.actions
 
 export default categorySlice.reducer;

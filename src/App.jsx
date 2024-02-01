@@ -8,6 +8,7 @@ import FlashCards from './components/FlashCards/FlashCards';
 import './App.css'
 
 
+
 function App() {
   const dispatch = useDispatch();
 
@@ -15,8 +16,11 @@ function App() {
     dispatch(getCategories())
   }, [])
 
+  console.log('entro')
+
   return (
     <>
+      {/* <Loading /> */}
       <NavBar />
       <FlashCards />
     </>

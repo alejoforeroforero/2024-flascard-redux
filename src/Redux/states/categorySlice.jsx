@@ -42,9 +42,8 @@ const categorySlice = createSlice({
     name: 'Category',
     initialState,
     reducers: {
-        getCards: (state, action) => {
-            state.categoryId = action.payload.categoryId;
-            state.amount = action.payload.amount;
+        goToHome: (state) => {
+            state.categoryName = ''
         }
     },
     extraReducers: builder => {
@@ -77,6 +76,6 @@ const categorySlice = createSlice({
     }
 })
 
-export const { getCards } = categorySlice.actions
+export const { goToHome } = categorySlice.actions
 
 export default categorySlice.reducer;

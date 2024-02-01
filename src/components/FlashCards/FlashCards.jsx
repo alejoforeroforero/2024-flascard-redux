@@ -30,6 +30,9 @@ const FlashCards = () => {
                             <br></br>
                             <br></br>
                             Choose a category from the header to generate flashcard questions and answers.
+                            <br></br>
+                            <br></br>
+                            <p>You are welcome to visit the repository here: <a target='_blank' href='https://github.com/alejoforeroforero/2024-flascard-redux'>https://github.com/alejoforeroforero/2024-flascard-redux</a></p>
                         </p>
                     </div>
                 }

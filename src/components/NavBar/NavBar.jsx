@@ -1,13 +1,13 @@
 import React, { useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { getFlashCards } from '../../Redux/states/categorySlice';
+import { goToHome } from '../../Redux/states/categorySlice';
+import { FaHome } from 'react-icons/fa';
 
 import './NavBar.css'
 
 const NavBar = () => {
     const categories = useSelector(state => state.categoryReducer.categories);
-    const categoryId = useSelector(state => state.categoryReducer.categoryId);
-    const amount = useSelector(state => state.categoryReducer.amount);
     const dispatch = useDispatch();
 
     const categoryEl = useRef()
@@ -24,9 +24,14 @@ const NavBar = () => {
         dispatch(getFlashCards(payLoadObj))
     }
 
+    const handleOnClick = () => {
+        dispatch(goToHome())
+    }
+
     return (
         <>
             <nav>
+                <FaHome cursor='pointer' size={'1.5em'} onClick={handleOnClick} />
                 <form className='flash-form' onSubmit={handleOnSubmit}>
                     <div className='form-group'>
                         <label htmlFor='category'>Category</label>
@@ -40,7 +45,6 @@ const NavBar = () => {
                             })}
                         </select>
                     </div>
-
                     <button>Generate</button>
                 </form>
             </nav>

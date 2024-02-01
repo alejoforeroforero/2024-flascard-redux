@@ -1,8 +1,5 @@
-# React + Vite
+This serves as a demonstration site designed for honing skills in Redux Toolkit, proficiently managing data API calls, and mastering responsive design with CSS Grid
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This demo is built upon the excellent tutorial created by Kayle at Web Dev Simplified Youtube channel:Watch the video
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Choose a category from the header to generate flashcard questions and answers.

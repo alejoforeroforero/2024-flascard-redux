@@ -1,0 +1,22 @@
+.flash-cards-section {
+  padding: 10px 5px 60px;
+
+  h1 {
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+.card-grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 20px;
+}
+
+.intro{
+  padding: 5%;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}

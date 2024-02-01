@@ -1,0 +1,38 @@
+nav {
+  height: 40px;
+  width: 100%;
+  background-color: rgb(50, 86, 127);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 1.5rem;
+  box-shadow: 0 0 5px 2px rgba(108, 86, 250, 0.3);
+  color: aliceblue;
+}
+
+.flash-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .form-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 12px;
+    height: 100%;
+
+    label {
+      margin: 0 4px;
+    }
+
+    select {
+      width: 200px;
+    }
+  }
+
+  button {
+    padding: 3px 5px;
+    cursor: pointer;
+  }
+}
